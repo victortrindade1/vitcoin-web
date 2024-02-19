@@ -1,9 +1,7 @@
-import styles from "./page.module.css";
+"use client";
+
+import { Container } from "./styles";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div>Helloooo World!</div>
-    </main>
-  );
+  return <Container>Helloooo World!</Container>;
 }
