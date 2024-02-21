@@ -16,9 +16,9 @@ export const DurinDoorContainer = styled.div`
 `;
 
 export const DurinDoor = styled(Image)`
-  width: 100vw;
+  width: 118vw;
   height: auto;
-  max-height: 100vh;
+  max-height: 118vh;
 `;
 
 export const Key = styled.div`
