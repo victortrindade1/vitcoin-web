@@ -16,15 +16,15 @@ export const DurinDoorContainer = styled.div`
 `;
 
 export const DurinDoor = styled(Image)`
-  width: 118vw;
+  width: 100vw;
   height: auto;
-  max-height: 118vh;
+  max-height: 100vh;
 `;
 
 export const Key = styled.div`
   height: 50px;
   width: 50px;
-
+  /* border: red 1px solid; */
   position: absolute;
   top: 64%;
 `;
@@ -59,33 +59,6 @@ export const Title = styled.div`
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-`;
-
-// Reflexo do texto
-export const TitleReflex = styled.div`
-  font-family: "Aniron";
-  font-size: 5vw;
-
-  -moz-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  mask-image: -webkit-gradient(
-    linear,
-    right top,
-    right bottom,
-    from(transparent),
-    color-stop(20%, transparent),
-    to(rgba(0, 0, 0, 0.4))
-  );
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    right top,
-    right bottom,
-    from(transparent),
-    color-stop(20%, transparent),
-    to(rgba(0, 0, 0, 0.4))
-  );
 `;
 
 export const PassInputContainer = styled.div`

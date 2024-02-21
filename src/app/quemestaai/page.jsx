@@ -10,7 +10,6 @@ import {
   DurinDoorContainer,
   Key,
   Title,
-  TitleReflex,
   TitleContainer,
   PassInputContainer,
   PassInput,
@@ -23,12 +22,10 @@ function Login() {
 
   const handleClickContainer = (e) => {
     setContadorClicks((contador) => contador + 1);
-    // console.log("cliquei no container");
   };
 
   const handleClickDoor = (e) => {
     setMostrarTitle(true);
-    // console.log("cliquei na chave");
   };
 
   useEffect(() => {
@@ -48,7 +45,6 @@ function Login() {
       {mostrarDurinDoor && <Key onClick={(e) => handleClickDoor(e)} />}
       <TitleContainer mostrarTitle={mostrarTitle}>
         <Title>Fale, amigo, e entre...</Title>
-        <TitleReflex>Fale, amigo, e entre...</TitleReflex>
       </TitleContainer>
       {mostrarTitle && (
         <PassInputContainer>
