@@ -22,7 +22,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased !important;
-    background-color: ${(props) => props.theme.dark}
+    /* background-color: ${(props) => props.theme.dark} */
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
   }
 
   body, input, button {
