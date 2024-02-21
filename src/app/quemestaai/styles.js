@@ -31,6 +31,8 @@ export const Key = styled.div`
 `;
 
 export const TitleContainer = styled.div`
+  width: 90%;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,7 +44,7 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.div`
   font-family: "Aniron";
-  font-size: 3.3vw;
+  font-size: 5vw;
 
   // Golden Effect
   background-image: linear-gradient(

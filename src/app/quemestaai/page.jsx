@@ -15,7 +15,7 @@ import {
   PassInput,
 } from "./styles";
 
-function Quemestaai() {
+function Login() {
   const [contadorClicks, setContadorClicks] = useState(0);
   const [mostrarDurinDoor, setMostrarDurinDoor] = useState(false);
   const [mostrarTitle, setMostrarTitle] = useState(false);
@@ -59,4 +59,4 @@ function Quemestaai() {
   );
 }
 
-export default Quemestaai;
+export default Login;
