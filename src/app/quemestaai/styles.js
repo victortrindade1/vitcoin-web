@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const DurinDoorContainer = styled.div`
-  opacity: ${(props) => (props.mostrarDurinDoor ? 1 : 0)};
+  opacity: ${(props) => (props.$mostrarDurinDoor ? 1 : 0)};
   transition: opacity 5s ease-in-out;
 `;
 
@@ -24,7 +24,7 @@ export const DurinDoor = styled(Image)`
 export const Key = styled.div`
   height: 50px;
   width: 50px;
-  /* border: red 1px solid; */
+
   position: absolute;
   top: 64%;
 `;
@@ -37,7 +37,7 @@ export const TitleContainer = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  opacity: ${(props) => (props.mostrarTitle ? 1 : 0)};
+  opacity: ${(props) => (props.$mostrarTitle ? 1 : 0)};
   transition: opacity 5s ease-in-out;
 `;
 

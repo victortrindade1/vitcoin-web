@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
 import durinDoor from "@/assets/svg/durindoor-minified.svg";
 
@@ -20,13 +21,16 @@ function Login() {
   const [mostrarDurinDoor, setMostrarDurinDoor] = useState(false);
   const [mostrarTitle, setMostrarTitle] = useState(false);
 
-  const handleClickContainer = (e) => {
-    setContadorClicks((contador) => contador + 1);
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
-  const handleClickDoor = (e) => {
-    setMostrarTitle(true);
-  };
+  const handleClickContainer = () =>
+    setContadorClicks((contador) => contador + 1);
+
+  const handleClickDoor = () => setMostrarTitle(true);
 
   useEffect(() => {
     contadorClicks === 7
@@ -38,18 +42,25 @@ function Login() {
 
   return (
     <Container onClick={(e) => handleClickContainer(e)}>
-      <DurinDoorContainer mostrarDurinDoor={mostrarDurinDoor}>
+      <DurinDoorContainer $mostrarDurinDoor={mostrarDurinDoor}>
         <DurinDoor src={durinDoor} alt='durin door' />
       </DurinDoorContainer>
 
       {mostrarDurinDoor && <Key onClick={(e) => handleClickDoor(e)} />}
-      <TitleContainer mostrarTitle={mostrarTitle}>
+      <TitleContainer $mostrarTitle={mostrarTitle}>
         <Title>Fale, amigo, e entre...</Title>
       </TitleContainer>
       {mostrarTitle && (
         <PassInputContainer>
-          <form>
-            <PassInput type={"password"} autoFocus></PassInput>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <PassInput
+              type={"password"}
+              autoFocus
+              {...register("password", {
+                minLength: 6,
+                maxLength: 16,
+              })}
+            />
           </form>
         </PassInputContainer>
       )}
